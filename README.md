@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Incentiv Swap - Uniswap V3 Frontend
 
-## Getting Started
+Фронтенд для обмена токенов на сети Incentiv с использованием форкнутых контрактов Uniswap V3.
 
-First, run the development server:
+## Особенности
+
+- 🔄 Обмен токенов через Uniswap V3 на сети Incentiv
+- 💰 Поддержка популярных токенов: WCENT, WETH, USDC, USDT, SOL
+- 🔐 Интеграция с Web3 кошельками (MetaMask, Injected)
+- 📊 Получение котировок в реальном времени
+- ✅ Автоматическая проверка и запрос approve для токенов
+- 🎨 Современный и адаптивный UI
+
+## Конфигурация сети
+
+- **Chain ID**: 24101
+- **RPC**: https://rpc.incentiv.io
+- **Explorer**: https://explorer.incentiv.io
+- **Native Token**: CENT
+
+## Контракты Uniswap V3
+
+- **Factory**: `0x766A315502B1f9869C0E2A19aEA6D6f55b0ad108`
+- **Router**: `0x4a66A8bA9704DD06fE52A027f2B16a3F5D11B048`
+- **Position Manager**: `0x800f7a6028EED5EA0e89a7C3799e13B5DE4f1D28`
+- **Quoter V3**: `0x1d317fFfBc3Bda5aA06F9f8f506e8C6082dC415A`
+- **WCENT**: `0xB0f0A14A50F14dc9e6476d61C00cF0375Dd4EB04`
+
+## Популярные пулы
+
+- WETH/WCENT (0.3%): `0xCC00489ECd4B60141DAb86c6aa44e7697c6923E6`
+- USDC/WCENT (0.3%): `0xf9884c2A1749b0a02ce780aDE437cBaDFA3a961D`
+- USDT/WCENT (0.3%): `0xd1da5c73eB5b498Dea4224267FEeA3A3dE82BA4E`
+- SOL/WCENT (0.3%): `0x40D6b92323493adB118EFB945D26c8bf09d37B9A`
+- MEME/WCENT (0.3%): `0xb58d75D42B80C79B4835F6a040E9f4578193AD78`
+
+## Установка
+
+```bash
+npm install
+```
+
+## Запуск в режиме разработки
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Сборка для продакшена
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Технологии
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 16** - React фреймворк
+- **Wagmi v3** - React хуки для Ethereum
+- **Viem** - TypeScript библиотека для Ethereum
+- **Uniswap V3 SDK** - SDK для работы с Uniswap V3
+- **Tailwind CSS** - Стилизация
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Использование
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Подключите кошелек (MetaMask или другой Web3 кошелек)
+2. Убедитесь, что вы находитесь в сети Incentiv (Chain ID: 24101)
+3. Выберите токены для обмена
+4. Введите количество токенов для обмена
+5. При необходимости подтвердите approve для токена
+6. Выполните swap
 
-## Deploy on Vercel
+## Примечания
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Для обмена нативного токена CENT используйте WCENT (Wrapped CENT)
+- Slippage по умолчанию: 1%
+- Deadline для транзакций: 20 минут
