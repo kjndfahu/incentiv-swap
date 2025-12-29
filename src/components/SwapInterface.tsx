@@ -610,7 +610,6 @@ export function SwapInterface() {
                   }}
                   className="w-full flex items-center gap-3 px-4 py-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition font-medium"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg" />
                   {connector.name}
                 </button>
               ))}
